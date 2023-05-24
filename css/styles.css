@@ -171,8 +171,6 @@ section.reviews article:first-of-type {
     color: var(--white); 
 }
 
-
-
 .reviews article {
     background-color: var(--verydarkmagenta);
     border-radius: var(--border-radius);
@@ -191,7 +189,6 @@ section.reviews article:first-of-type {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 2.5rem;
-
 }
 .buyer-details {
     display: flex;
@@ -201,11 +198,6 @@ section.reviews article:first-of-type {
 .name {
     font-size: 1.45rem;
     font-weight: 500;
-    /* margin:0; */
-    /* border: 2px green solid; */
-    /* margin-left: 1rem; */
-    
-    /* width: */
 }
 .verified {
     color: var(--softpink);
