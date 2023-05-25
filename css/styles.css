@@ -208,11 +208,11 @@ section.reviews article:first-of-type {
 .bquote {
     display: inline;
 }
-blockquote p:before {
+blockquote p::before {
     content: open-quote;
 }
 
-blockquote p:after {
+blockquote p::after {
     content: close-quote;
 }
 
