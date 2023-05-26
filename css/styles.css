@@ -144,6 +144,9 @@ Custom styles
     font-size: 1.25rem;
 }
 
+.rating img {
+    margin: 0.25rem;
+}
 .reviews {
     background-color: var(--white);
     color: var(--white);
@@ -218,4 +221,113 @@ blockquote p::after {
 
 blockquote {
     quotes: "“" "”" "‘" "’";
+}
+
+
+/* 
+========================================
+Media Query
+========================================
+*/
+
+
+@media screen  and (min-width: 1200px) {
+
+
+    .container-details {
+        display: grid;
+        grid-template-areas: 
+       "one one two two two two two"
+       "one one two two two two two"
+       "one one two two two two two"
+       "three three three three three three three"
+       "three three three three three three three";
+        grid-template-columns: auto;
+        min-width: 100vw; 
+    }
+
+    .intro {
+        grid-area: one;
+        /* text-align: left; */
+        /* grid-template-rows: subgrid; */
+        /* justify-self: flex-start; */
+       
+
+    }
+
+    .intro h2 {
+        text-align: left;
+        margin-left: 5rem;
+        margin-bottom: 1rem;
+         width: 25rem;
+        
+    }
+
+    .intro p {
+        text-align: left;
+        margin-left: 5rem;
+        width: 30rem;
+    }
+
+    .ratings-container {
+        grid-area: two;
+        align-self: center;
+        margin-top: 4rem;
+        margin-right: 1rem;
+        /* display: grid; */
+        /* grid-template-columns: subgrid; */
+        /* grid-template-rows: repeat(3, 40px); */
+    }
+
+    .rating {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        /* margin: 0 auto; */
+        align-items: flex-start;
+        /* margin-top: 1rem; */
+        /* flex-basis: auto; */
+        width: 35rem;
+    }
+
+    .rating img:first-child {
+        margin-left: 3rem;
+    }
+    .rating p  {
+        margin-left: 2rem;
+        /* margin: auto auto; */
+    }
+    .rating:nth-of-type(2) {
+        margin-left: 4rem;
+    }
+    .rating:nth-of-type(3) {
+        margin-left: 8rem;
+    }
+
+    section.reviews article:first-of-type {
+    margin-top: 0;
+}
+    
+    .reviews {
+        grid-area: three;
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        padding:4rem;
+    }
+.buyer-review:nth-of-type(2) {
+    margin-top: 2rem;
+}
+.buyer-review:nth-of-type(3) {
+    margin-top: 4rem;
+}
+ 
+body {
+     background-position: 10vw -1vh, 15vw 25vh;
+     background-size: cover;
+}
+
+    
+    
 }
