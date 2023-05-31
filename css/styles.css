@@ -17,7 +17,6 @@ box-sizing: border-box;
     --softpink: hsl(333, 80%, 67%);
 
     /* Neutral */
-
     --darkgraymagenta: hsl(303, 10%, 53%);
     --lightgraymagenta: hsl(300, 24%, 96%);
     --white: hsl(0, 0%, 100%);
@@ -31,15 +30,11 @@ box-sizing: border-box;
 html {font-size: 93.8%; } /*15px*/
 
 body {
-    /* background-image: url("/images/bg-pattern-top-mobile.svg"), url("/images/bg-pattern-bottom-mobile.svg") ; */
-    /* background-repeat: no-repeat, no-repeat; */
-    /* background-position: 10vw -1vh, 70vw 75vh; */
     background-color: var(--white);
     font-family: 'League Spartan', sans-serif;
     font-weight: 400;
     line-height: 1.75;
     color: var(--verydarkmagenta);
-
 }
 
 
@@ -113,9 +108,9 @@ Custom styles
 
 .intro {
     background-image: url("/images/bg-pattern-top-mobile.svg");
-        background-position: top left;
-        background-size: 100% 100%;
-        /* background-position: 10vw -1vh; */
+    background-position: top left;
+    background-size: 100% 100%;
+        
 }
 
 .intro h2 {
@@ -155,16 +150,16 @@ Custom styles
 .rating img {
     margin: 0.25rem;
 }
+
 .reviews {
-    background-color: var(--white); background-image: url("/images/bg-pattern-bottom-desktop.svg");
+    background-color: var(--white); 
+    background-image: url("/images/bg-pattern-bottom-desktop.svg");
     color: var(--white);
     border-radius: var(--border-radius);
     margin: 0;
     background-image: url("/images/bg-pattern-bottom-mobile.svg");
-        background-position: bottom right;
-        /* background-size: cover; */
-        background-repeat: no-repeat;
-        /* background-position: bottom right; */
+    background-position: bottom right;
+    background-repeat: no-repeat;   
 }
 
 
@@ -180,7 +175,6 @@ section.reviews article:first-of-type {
 
 }
 
-
 .buyer-review {
     padding: 3.5rem 2.5rem 1rem;
     margin-top: 1.5rem;
@@ -189,13 +183,11 @@ section.reviews article:first-of-type {
     border-radius: var(--border-radius);
 }
 
-
 .buyer-review h4 {
     color: var(--white);
     font-size: 1.25rem;
     font-weight: 500;
 }
-
 
 .buyer {
     display: flex;
@@ -221,9 +213,11 @@ section.reviews article:first-of-type {
     display: inline-block;
     margin-top: -0.75rem;
 }
+
 .bquote {
     display: inline;
 }
+
 blockquote p::before {
     content: open-quote;
 }
@@ -236,7 +230,6 @@ blockquote {
     quotes: "“" "”" "‘" "’";
 }
 
-
 /* 
 ========================================
 Media Query
@@ -246,129 +239,89 @@ Media Query
 
 @media screen  and (min-width: 1200px) {
 
+.container-details {
+    display: grid;
+    grid-template-areas: 
+        "one one two two two two two"
+        "one one two two two two two"
+        "one one two two two two two"
+        "three three three three three three three"
+        "three three three three three three three";
+    grid-template-columns: auto;
+    min-width: 100vw; 
+}
 
-    .container-details {
-        display: grid;
-        grid-template-areas: 
-       "one one two two two two two"
-       "one one two two two two two"
-       "one one two two two two two"
-       "three three three three three three three"
-       "three three three three three three three";
-        grid-template-columns: auto;
-        min-width: 100vw; 
-    }
+.intro {
+    grid-area: one;
+    background-image: url("/images/bg-pattern-top-desktop.svg");
+}
+.intro h2 {
+    text-align: left;
+    margin-left: 5rem;
+    margin-bottom: 1rem;
+    width: 25rem;
+}
 
-    .intro {
-        grid-area: one;
-        /* text-align: left; */
-        /* grid-template-rows: subgrid; */
-        /* justify-self: flex-start; */
-        background-image: url("/images/bg-pattern-top-desktop.svg");
-        /* background-position: top left; */
-        /* background-size: 100% 100%; */
+.intro p {
+    text-align: left;
+    margin-left: 5rem;
+    width: 30rem;
+}
 
-    }
+.ratings-container {
+    grid-area: two;
+    align-self: center;
+    margin-top: 4rem;
+    margin-right: 1rem;
+}
 
-    .intro h2 {
-        text-align: left;
-        margin-left: 5rem;
-        margin-bottom: 1rem;
-         width: 25rem;
-        
-    }
+.rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 35rem;
+}
+.rating img:first-child {
+    margin-left: 3rem;
+}
+    
+.rating p  {
+    margin-left: 2rem;
+}
 
-    .intro p {
-        text-align: left;
-        margin-left: 5rem;
-        width: 30rem;
-    }
+.rating:nth-of-type(2) {
+    margin-left: 4rem;
+}
 
-    .ratings-container {
-        grid-area: two;
-        align-self: center;
-        margin-top: 4rem;
-        margin-right: 1rem;
-        /* display: grid; */
-        /* grid-template-columns: subgrid; */
-        /* grid-template-rows: repeat(3, 40px); */
-    }
+.rating:nth-of-type(3) {
+    margin-left: 8rem;
+}
 
-    .rating {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-
-        /* margin: 0 auto; */
-        align-items: flex-start;
-        /* margin-top: 1rem; */
-        /* flex-basis: auto; */
-        width: 35rem;
-    }
-
-    .rating img:first-child {
-        margin-left: 3rem;
-    }
-    .rating p  {
-        margin-left: 2rem;
-        /* margin: auto auto; */
-    }
-    .rating:nth-of-type(2) {
-        margin-left: 4rem;
-    }
-    .rating:nth-of-type(3) {
-        margin-left: 8rem;
-    }
-
-    section.reviews article:first-of-type {
+section.reviews article:first-of-type {
     margin-top: 0;
 }
     
-    .reviews {
-        grid-area: three;
-        display: flex;
-        align-items: flex-start;
-        gap: 2rem;
-        padding:4rem;
-         background-image: url("/images/bg-pattern-bottom-desktop.svg");
-    }
+.reviews {
+    grid-area: three;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding:4rem;
+    background-image: url("/images/bg-pattern-bottom-desktop.svg");
+}
+
 .buyer-review:nth-of-type(2) {
     margin-top: 2rem;
 }
+
 .buyer-review:nth-of-type(3) {
     margin-top: 4rem;
 }
- 
+
 body {
     background: var(--white);
-     /* background-image:  url(/images/bg-pattern-bottom-desktop.svg); */
-     /* background-position: center center; */
-     /* background-position: bottom 25px right 25px; */
-    
-     /* background-position: 10vw -1vh, -20vw 20vh; */
-   /* background-attachment: fixed; */
-   /* background-position: bottom 900px right 20px; */
-     /* background-position: bottom 60vh right 50vw, top 16vh left -40vw; */
-      /* background-position: top 0vh left 0vw;  */
-   /* background-size: 100% 100%; */
-   /* background-repeat: no-repeat; */
-   /* background-position: bottom right; */
 
-
-   /* background-size: contain; */
-   /* background-origin: content-box; */
-    
-     
 }
-
-
-    .reviews {
-        /* background-image: url("/images/bg-pattern-bottom-desktop.svg"); */
-        /* background-position: bottom  right; */
-        /* background-size: cover; */
-        /* background-repeat: no-repeat; */
-    }
-
-   
 
 }
