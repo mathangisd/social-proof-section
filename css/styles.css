@@ -104,6 +104,7 @@ Custom styles
 .container-details {
     max-width: 375px;
     width: 100%;
+    padding: 0 2rem;
 }
 
 .intro {
@@ -118,18 +119,21 @@ Custom styles
     text-align: center;
     word-spacing: -0.15rem;
     letter-spacing: -0.1rem;
+    line-height: 2.5rem;
 }
 
 .intro p {
     font-weight: 500;
     color: var(--darkgraymagenta);
     text-align: center;
+    padding: 0 1rem;
 }
 
 .ratings-container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    
 }
 
 .rating  {
@@ -240,18 +244,25 @@ Media Query
 .container-details {
     display: grid;
     grid-template-areas: 
-        "one one two two two two two"
+        ". . two two two two two"
         "one one two two two two two"
         "one one two two two two two"
         "three three three three three three three"
         "three three three three three three three";
-    grid-template-columns: auto;
+    /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 550px)), 1fr ); */
     min-width: 100vw; 
+    justify-items: start;
+    align-items: center;
+    /* grid-template-rows: auto; */
 }
 
 .intro {
     grid-area: one;
+    /* padding: 5rem; */
     background-image: url("/images/bg-pattern-top-desktop.svg");
+    display: grid;
+    align-items: center;
+    justify-items: center;
 }
 
 .intro h2 {
@@ -259,19 +270,24 @@ Media Query
     margin-left: 5rem;
     margin-bottom: 1rem;
     width: 25rem;
+    margin-top: 3rem;
+    line-height: 3rem;
 }
 
 .intro p {
     text-align: left;
     margin-left: 5rem;
-    width: 30rem;
+    width: 25rem;
+    padding: 0;
 }
 
 .ratings-container {
     grid-area: two;
     align-self: center;
-    margin-top: 4rem;
+    margin-top: 6rem;
     margin-right: 1rem;
+    align-self:  center;
+    justify-self: center;
 }
 
 .rating {
