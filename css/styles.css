@@ -249,16 +249,13 @@ Media Query
         "one one two two two two two"
         "three three three three three three three"
         "three three three three three three three";
-    /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 550px)), 1fr ); */
     min-width: 100vw; 
     justify-items: start;
     align-items: center;
-    /* grid-template-rows: auto; */
 }
 
 .intro {
     grid-area: one;
-    /* padding: 5rem; */
     background-image: url("/images/bg-pattern-top-desktop.svg");
     display: grid;
     align-items: center;
