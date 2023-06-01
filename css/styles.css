@@ -235,8 +235,6 @@ Media Query
 
 body {
     background-image: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
-    background-position: top left, bottom right;
-    background-repeat: no-repeat, no-repeat;
 }
 .container-details {
     display: grid;
@@ -279,7 +277,6 @@ body {
     align-self: center;
     margin-top: 10rem;
     margin-right: 1rem;
-    align-self:  center;
     justify-self: center;
 }
 
